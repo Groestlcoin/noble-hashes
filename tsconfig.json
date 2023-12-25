@@ -20,7 +20,9 @@
     "noUncheckedIndexedAccess": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "allowJs": true,
+    "checkJs": false
   },
-  "include": ["src"],
+  "include": ["src", "src/groestl.d.ts", "src/op.d.ts"],
   "exclude": ["node_modules", "*.d.ts"]
 }
