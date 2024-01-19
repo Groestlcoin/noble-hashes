@@ -14,7 +14,7 @@ should('groestl vectors', () => {
   }
 });
 
-should('groest_2 test', () => {
+should('groestl_2 test', () => {
   const msg =
     'Groestl is an Austrian dish, usually made of leftover potatoes and pork, cut into slice.';
   const actualHash = groestl256(groestl512(msg));
