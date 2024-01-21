@@ -172,7 +172,7 @@
     "hmac",
     "hkdf",
     "pbkdf2",
-    "scrypt", ,
+    "scrypt",
     "kdf",
     "hash",
     "cryptography",
