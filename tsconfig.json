@@ -12,7 +12,7 @@
         "noUnusedLocals": true,
         "baseUrl": ".",
         "paths": {
-            "@noble/hashes/crypto": [ "src/crypto" ]
+            "@noble-grs/hashes/crypto": [ "src/crypto" ]
         },
     },
     "include": ["src"],
