@@ -1,6 +1,6 @@
 {
   "name": "@noble/hashes",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Audited & minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt",
   "files": [
     "/*.js",
@@ -26,7 +26,7 @@
   "homepage": "https://paulmillr.com/noble/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulmillr/noble-hashes.git"
+    "url": "git+https://github.com/paulmillr/noble-hashes.git"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -37,8 +37,8 @@
   "devDependencies": {
     "micro-bmark": "0.3.1",
     "micro-should": "0.4.0",
-    "prettier": "2.8.4",
-    "typescript": "5.0.2"
+    "prettier": "3.1.1",
+    "typescript": "5.3.2"
   },
   "engines": {
     "node": ">= 16"
@@ -63,10 +63,10 @@
       "import": "./esm/_assert.js",
       "default": "./_assert.js"
     },
-    "./_sha2": {
-      "types": "./_sha2.d.ts",
-      "import": "./esm/_sha2.js",
-      "default": "./_sha2.js"
+    "./_md": {
+      "types": "./_md.d.ts",
+      "import": "./esm/_md.js",
+      "default": "./_md.js"
     },
     "./argon2": {
       "types": "./argon2.d.ts",
@@ -92,6 +92,16 @@
       "types": "./eskdf.d.ts",
       "import": "./esm/eskdf.js",
       "default": "./eskdf.js"
+    },
+    "./groestl256": {
+      "types": "./groestl256.d.ts",
+      "import": "./esm/groestl256.js",
+      "default": "./groestl256.js"
+    },
+    "./groestl512": {
+      "types": "./groestl512.d.ts",
+      "import": "./esm/groestl512.js",
+      "default": "./groestl512.js"
     },
     "./hkdf": {
       "types": "./hkdf.d.ts",
