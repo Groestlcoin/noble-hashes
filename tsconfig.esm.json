@@ -14,7 +14,7 @@
     "noUnusedParameters": true,
     "baseUrl": ".",
     "paths": {
-      "@noble/hashes/crypto": ["src/crypto"]
+      "hashes-grs/crypto": ["src/crypto"]
     },
     "module": "es2020",
     "outDir": "esm",
