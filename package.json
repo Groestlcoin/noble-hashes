@@ -1,7 +1,7 @@
 {
   "name": "hashes-grs",
   "version": "1.3.3",
-  "description": "Audited & minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt",
+  "description": "Minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt and Groestl",
   "files": [
     "/*.js",
     "/*.d.ts",
@@ -22,11 +22,11 @@
     "test:dos": "node test/slow-dos.test.js",
     "test:big": "node test/slow-big.test.js"
   },
-  "author": "Paul Miller (https://paulmillr.com)",
-  "homepage": "https://paulmillr.com/noble/",
+  "author": "Groestlcoin Developers",
+  "homepage": "https://groestlcoin.org",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulmillr/noble-hashes.git"
+    "url": "https://github.com/Groestlcoin/noble-hashes-grs.git"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -175,6 +175,7 @@
     "ripemd160",
     "blake2",
     "blake3",
+    "groestl",
     "hmac",
     "hkdf",
     "pbkdf2",
@@ -185,5 +186,5 @@
     "security",
     "noble"
   ],
-  "funding": "https://paulmillr.com/funding/"
+  "funding": "https://www.groestlcoin.org/donations/"
 }
