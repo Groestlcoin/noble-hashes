@@ -29,7 +29,7 @@ The library's initial development was funded by [Ethereum Foundation](https://et
 
 ## Usage
 
-> npm install @noble/hashes
+> npm install hashes-grs
 
 We support all major platforms and runtimes.
 For [Deno](https://deno.land), ensure to use [npm specifier](https://deno.land/manual@v1.28.0/node/npm_specifiers).
@@ -37,9 +37,9 @@ For React Native, you may need a [polyfill for getRandomValues](https://github.c
 A standalone file [noble-hashes.js](https://github.com/paulmillr/noble-hashes/releases) is also available.
 
 ```js
-// import * from '@noble/hashes'; // Error: use sub-imports, to ensure small app size
-import { sha256 } from '@noble/hashes/sha256'; // ECMAScript modules (ESM) and Common.js
-// import { sha256 } from 'npm:@noble/hashes@1.3.0/sha256'; // Deno
+// import * from 'hashes-grs'; // Error: use sub-imports, to ensure small app size
+import { sha256 } from 'hashes-grs/sha256'; // ECMAScript modules (ESM) and Common.js
+// import { sha256 } from 'npm:hashes-grs@1.3.0/sha256'; // Deno
 console.log(sha256(new Uint8Array([1, 2, 3]))); // Uint8Array(32) [3, 144, 88, 198, 242...]
 // you could also pass strings that will be UTF8-encoded to Uint8Array
 console.log(sha256('abc')); // == sha256(new TextEncoder().encode('abc'))
@@ -155,7 +155,7 @@ import {
   keccak_512,
   shake128,
   shake256,
-} from '@noble/hashes/sha3';
+} from 'hashes-grs/sha3';
 const h5a = sha3_256('abc');
 const h5b = sha3_256
   .create()
@@ -188,7 +188,7 @@ import {
   parallelhash128,
   parallelhash256,
   keccakprg,
-} from '@noble/hashes/sha3-addons';
+} from 'hashes-grs/sha3-addons';
 const h7c = cshake128('abc', { personalization: 'def' });
 const h7d = cshake256('abc', { personalization: 'def' });
 const h7e = kmac128('key', 'message');
@@ -219,7 +219,7 @@ const rand1b = p.fetch(1);
 ##### ripemd160
 
 ```typescript
-import { ripemd160 } from '@noble/hashes/ripemd160';
+import { ripemd160 } from 'hashes-grs/ripemd160';
 // function ripemd160(data: Uint8Array): Uint8Array;
 const hash8 = ripemd160('abc');
 const hash9 = ripemd160
@@ -234,8 +234,8 @@ See [RFC 2286](https://datatracker.ietf.org/doc/html/rfc2286),
 ##### blake2b, blake2s, blake3
 
 ```typescript
-import { blake2b } from '@noble/hashes/blake2b';
-import { blake2s } from '@noble/hashes/blake2s';
+import { blake2b } from 'hashes-grs/blake2b';
+import { blake2s } from 'hashes-grs/blake2s';
 const h10a = blake2s('abc');
 const b2params = { key: new Uint8Array([1]), personalization: t, salt: t, dkLen: 32 };
 const h10b = blake2s('abc', b2params);
@@ -244,7 +244,7 @@ const h10c = blake2s
   .update(Uint8Array.from([1, 2, 3]))
   .digest();
 
-import { blake3 } from '@noble/hashes/blake3';
+import { blake3 } from 'hashes-grs/blake3';
 // All params are optional
 const h11 = blake3('abc', { dkLen: 256, key: 'def', context: 'fji' });
 ```
